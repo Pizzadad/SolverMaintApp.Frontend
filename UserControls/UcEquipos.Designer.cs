@@ -28,10 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            label1 = new Label();
+            SuspendLayout();
+            // 
+            // label1
+            // 
+
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Poor Richard", 50F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(325, 159);
+            label1.Name = "label1";
+            label1.Size = new Size(202, 78);
+            label1.TabIndex = 0;
+            label1.Text = "Equipos";
+
+            // 
+            // UcEquipos
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            Controls.Add(label1);
+            Name = "UcEquipos";
+            Size = new Size(759, 392);
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
+
+        private Label label1;
     }
 }
