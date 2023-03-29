@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcFichaTecnica));
-            toolStrip1 = new ToolStrip();
-            toolStripButton1 = new ToolStripButton();
-            toolStripButton2 = new ToolStripButton();
-            toolStripButton3 = new ToolStripButton();
-            toolStripButton4 = new ToolStripButton();
+            fichaTecnicaToolStrip = new ToolStrip();
+            fichaTecnicaToolStripBtnAllPrevius = new ToolStripButton();
+            fichaTecnicaToolStripBtnPrevius = new ToolStripButton();
+            fichaTecnicaToolStripBtnNext = new ToolStripButton();
+            fichaTecnicaToolStripBtnAllNext = new ToolStripButton();
+            toolStripSeparator1 = new ToolStripSeparator();
+            fichaTecnicaToolStripImgItem = new ToolStripLabel();
+            fichaTecnicaToolStripDesItem = new ToolStripLabel();
             tabControl1 = new TabControl();
             tabDatoEquipo = new TabPage();
             tabControl2 = new TabControl();
@@ -44,22 +47,22 @@
             panel2 = new Panel();
             button2 = new Button();
             label19 = new Label();
-            textBox21 = new TextBox();
+            txtUbiSeccion = new TextBox();
             label18 = new Label();
-            textBox20 = new TextBox();
+            txtUbiArea = new TextBox();
             label17 = new Label();
-            textBox19 = new TextBox();
+            txtUbiUnidad = new TextBox();
             label16 = new Label();
             label15 = new Label();
-            textBox18 = new TextBox();
+            txtUbiCodigo = new TextBox();
             panel10 = new Panel();
             button1 = new Button();
             label6 = new Label();
             comboBox7 = new ComboBox();
             label9 = new Label();
-            dateTimePicker2 = new DateTimePicker();
+            dateFecPtaServ = new DateTimePicker();
             label10 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            dateFecFab = new DateTimePicker();
             comboBox6 = new ComboBox();
             comboBox5 = new ComboBox();
             label13 = new Label();
@@ -74,25 +77,25 @@
             textBox15 = new TextBox();
             textBox12 = new TextBox();
             label7 = new Label();
-            textBox7 = new TextBox();
+            txtNroSerie = new TextBox();
             label8 = new Label();
-            textBox8 = new TextBox();
+            txtModelo = new TextBox();
             label4 = new Label();
-            textBox4 = new TextBox();
+            txtCodLocal = new TextBox();
             label3 = new Label();
-            textBox3 = new TextBox();
+            txtCodigo = new TextBox();
             label2 = new Label();
-            textBox2 = new TextBox();
+            txtDescription = new TextBox();
             label1 = new Label();
-            textBox1 = new TextBox();
+            txtCodGrupo = new TextBox();
             panel9 = new Panel();
             panel4 = new Panel();
             label25 = new Label();
-            dateTimePicker3 = new DateTimePicker();
+            dateFecBaja = new DateTimePicker();
             label27 = new Label();
-            textBox27 = new TextBox();
+            txtPrioridad = new TextBox();
             label29 = new Label();
-            textBox29 = new TextBox();
+            txtNOverhaul = new TextBox();
             panel3 = new Panel();
             label26 = new Label();
             panel6 = new Panel();
@@ -107,17 +110,17 @@
             radioButton1 = new RadioButton();
             label24 = new Label();
             label22 = new Label();
-            textBox24 = new TextBox();
+            txtCostoTotal = new TextBox();
             label23 = new Label();
-            textBox25 = new TextBox();
+            txtTerceros = new TextBox();
             label21 = new Label();
-            textBox23 = new TextBox();
+            txtRepuestos = new TextBox();
             label20 = new Label();
-            textBox22 = new TextBox();
+            txtManoObra = new TextBox();
             panelImgFichaTecnica = new Panel();
             pcbFichaTecnica = new PictureBox();
             tabDatosEquipoDatosContables = new TabPage();
-            toolStrip1.SuspendLayout();
+            fichaTecnicaToolStrip.SuspendLayout();
             tabControl1.SuspendLayout();
             tabDatoEquipo.SuspendLayout();
             tabControl2.SuspendLayout();
@@ -136,59 +139,83 @@
             ((System.ComponentModel.ISupportInitialize)pcbFichaTecnica).BeginInit();
             SuspendLayout();
             // 
-            // toolStrip1
+            // fichaTecnicaToolStrip
             // 
-            toolStrip1.BackColor = SystemColors.ButtonFace;
-            toolStrip1.Items.AddRange(new ToolStripItem[] { toolStripButton1, toolStripButton2, toolStripButton3, toolStripButton4 });
-            toolStrip1.Location = new Point(0, 0);
-            toolStrip1.Name = "toolStrip1";
-            toolStrip1.Size = new Size(1559, 25);
-            toolStrip1.TabIndex = 0;
-            toolStrip1.Text = "toolStrip1";
+            fichaTecnicaToolStrip.BackColor = SystemColors.ButtonFace;
+            fichaTecnicaToolStrip.Items.AddRange(new ToolStripItem[] { fichaTecnicaToolStripBtnAllPrevius, fichaTecnicaToolStripBtnPrevius, fichaTecnicaToolStripBtnNext, fichaTecnicaToolStripBtnAllNext, toolStripSeparator1, fichaTecnicaToolStripImgItem, fichaTecnicaToolStripDesItem });
+            fichaTecnicaToolStrip.Location = new Point(0, 0);
+            fichaTecnicaToolStrip.Name = "fichaTecnicaToolStrip";
+            fichaTecnicaToolStrip.Size = new Size(1559, 25);
+            fichaTecnicaToolStrip.TabIndex = 0;
+            fichaTecnicaToolStrip.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // fichaTecnicaToolStripBtnAllPrevius
             // 
-            toolStripButton1.BackgroundImage = (Image)resources.GetObject("toolStripButton1.BackgroundImage");
-            toolStripButton1.BackgroundImageLayout = ImageLayout.Zoom;
-            toolStripButton1.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton1.ImageTransparentColor = Color.Magenta;
-            toolStripButton1.Name = "toolStripButton1";
-            toolStripButton1.Size = new Size(23, 22);
-            toolStripButton1.Text = "toolStripButton1";
-            toolStripButton1.ToolTipText = "Total Previus";
+            fichaTecnicaToolStripBtnAllPrevius.BackgroundImage = (Image)resources.GetObject("fichaTecnicaToolStripBtnAllPrevius.BackgroundImage");
+            fichaTecnicaToolStripBtnAllPrevius.BackgroundImageLayout = ImageLayout.Zoom;
+            fichaTecnicaToolStripBtnAllPrevius.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            fichaTecnicaToolStripBtnAllPrevius.ImageTransparentColor = Color.Magenta;
+            fichaTecnicaToolStripBtnAllPrevius.Name = "fichaTecnicaToolStripBtnAllPrevius";
+            fichaTecnicaToolStripBtnAllPrevius.Size = new Size(23, 22);
+            fichaTecnicaToolStripBtnAllPrevius.Text = "toolStripButton1";
+            fichaTecnicaToolStripBtnAllPrevius.ToolTipText = "Total Previus";
+            fichaTecnicaToolStripBtnAllPrevius.Click += fichaTecnicaToolStripBtnAllPrevius_Click;
             // 
-            // toolStripButton2
+            // fichaTecnicaToolStripBtnPrevius
             // 
-            toolStripButton2.BackgroundImage = (Image)resources.GetObject("toolStripButton2.BackgroundImage");
-            toolStripButton2.BackgroundImageLayout = ImageLayout.Zoom;
-            toolStripButton2.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton2.ImageTransparentColor = Color.Magenta;
-            toolStripButton2.Name = "toolStripButton2";
-            toolStripButton2.Size = new Size(23, 22);
-            toolStripButton2.Text = "toolStripButton2";
-            toolStripButton2.ToolTipText = "Previus";
+            fichaTecnicaToolStripBtnPrevius.BackgroundImage = (Image)resources.GetObject("fichaTecnicaToolStripBtnPrevius.BackgroundImage");
+            fichaTecnicaToolStripBtnPrevius.BackgroundImageLayout = ImageLayout.Zoom;
+            fichaTecnicaToolStripBtnPrevius.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            fichaTecnicaToolStripBtnPrevius.ImageTransparentColor = Color.Magenta;
+            fichaTecnicaToolStripBtnPrevius.Name = "fichaTecnicaToolStripBtnPrevius";
+            fichaTecnicaToolStripBtnPrevius.Size = new Size(23, 22);
+            fichaTecnicaToolStripBtnPrevius.Text = "toolStripButton2";
+            fichaTecnicaToolStripBtnPrevius.ToolTipText = "Previus";
+            fichaTecnicaToolStripBtnPrevius.Click += fichaTecnicaToolStripBtnPrevius_Click;
             // 
-            // toolStripButton3
+            // fichaTecnicaToolStripBtnNext
             // 
-            toolStripButton3.BackgroundImage = (Image)resources.GetObject("toolStripButton3.BackgroundImage");
-            toolStripButton3.BackgroundImageLayout = ImageLayout.Zoom;
-            toolStripButton3.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton3.ImageTransparentColor = Color.Magenta;
-            toolStripButton3.Name = "toolStripButton3";
-            toolStripButton3.Size = new Size(23, 22);
-            toolStripButton3.Text = "toolStripButton3";
-            toolStripButton3.ToolTipText = "Next";
+            fichaTecnicaToolStripBtnNext.BackgroundImage = (Image)resources.GetObject("fichaTecnicaToolStripBtnNext.BackgroundImage");
+            fichaTecnicaToolStripBtnNext.BackgroundImageLayout = ImageLayout.Zoom;
+            fichaTecnicaToolStripBtnNext.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            fichaTecnicaToolStripBtnNext.ImageTransparentColor = Color.Magenta;
+            fichaTecnicaToolStripBtnNext.Name = "fichaTecnicaToolStripBtnNext";
+            fichaTecnicaToolStripBtnNext.Size = new Size(23, 22);
+            fichaTecnicaToolStripBtnNext.Text = "toolStripButton3";
+            fichaTecnicaToolStripBtnNext.ToolTipText = "Next";
+            fichaTecnicaToolStripBtnNext.Click += fichaTecnicaToolStripBtnNext_Click;
             // 
-            // toolStripButton4
+            // fichaTecnicaToolStripBtnAllNext
             // 
-            toolStripButton4.BackgroundImage = (Image)resources.GetObject("toolStripButton4.BackgroundImage");
-            toolStripButton4.BackgroundImageLayout = ImageLayout.Zoom;
-            toolStripButton4.DisplayStyle = ToolStripItemDisplayStyle.Image;
-            toolStripButton4.ImageTransparentColor = Color.Magenta;
-            toolStripButton4.Name = "toolStripButton4";
-            toolStripButton4.Size = new Size(23, 22);
-            toolStripButton4.Text = "toolStripButton4";
-            toolStripButton4.ToolTipText = "Total Next";
+            fichaTecnicaToolStripBtnAllNext.BackgroundImage = (Image)resources.GetObject("fichaTecnicaToolStripBtnAllNext.BackgroundImage");
+            fichaTecnicaToolStripBtnAllNext.BackgroundImageLayout = ImageLayout.Zoom;
+            fichaTecnicaToolStripBtnAllNext.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            fichaTecnicaToolStripBtnAllNext.ImageTransparentColor = Color.Magenta;
+            fichaTecnicaToolStripBtnAllNext.Name = "fichaTecnicaToolStripBtnAllNext";
+            fichaTecnicaToolStripBtnAllNext.Size = new Size(23, 22);
+            fichaTecnicaToolStripBtnAllNext.Text = "toolStripButton4";
+            fichaTecnicaToolStripBtnAllNext.ToolTipText = "Total Next";
+            fichaTecnicaToolStripBtnAllNext.Click += fichaTecnicaToolStripBtnAllNext_Click;
+            // 
+            // toolStripSeparator1
+            // 
+            toolStripSeparator1.Name = "toolStripSeparator1";
+            toolStripSeparator1.Size = new Size(6, 25);
+            // 
+            // fichaTecnicaToolStripImgItem
+            // 
+            fichaTecnicaToolStripImgItem.BackgroundImageLayout = ImageLayout.Zoom;
+            fichaTecnicaToolStripImgItem.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            fichaTecnicaToolStripImgItem.Image = (Image)resources.GetObject("fichaTecnicaToolStripImgItem.Image");
+            fichaTecnicaToolStripImgItem.ImageTransparentColor = Color.Transparent;
+            fichaTecnicaToolStripImgItem.Name = "fichaTecnicaToolStripImgItem";
+            fichaTecnicaToolStripImgItem.Size = new Size(16, 22);
+            fichaTecnicaToolStripImgItem.Text = "toolStripLabel1";
+            // 
+            // fichaTecnicaToolStripDesItem
+            // 
+            fichaTecnicaToolStripDesItem.Name = "fichaTecnicaToolStripDesItem";
+            fichaTecnicaToolStripDesItem.Size = new Size(0, 22);
             // 
             // tabControl1
             // 
@@ -270,14 +297,14 @@
             // 
             panel2.Controls.Add(button2);
             panel2.Controls.Add(label19);
-            panel2.Controls.Add(textBox21);
+            panel2.Controls.Add(txtUbiSeccion);
             panel2.Controls.Add(label18);
-            panel2.Controls.Add(textBox20);
+            panel2.Controls.Add(txtUbiArea);
             panel2.Controls.Add(label17);
-            panel2.Controls.Add(textBox19);
+            panel2.Controls.Add(txtUbiUnidad);
             panel2.Controls.Add(label16);
             panel2.Controls.Add(label15);
-            panel2.Controls.Add(textBox18);
+            panel2.Controls.Add(txtUbiCodigo);
             panel2.Location = new Point(3, 447);
             panel2.Name = "panel2";
             panel2.Size = new Size(362, 187);
@@ -303,12 +330,12 @@
             label19.TabIndex = 38;
             label19.Text = "Sección";
             // 
-            // textBox21
+            // txtUbiSeccion
             // 
-            textBox21.Location = new Point(12, 145);
-            textBox21.Name = "textBox21";
-            textBox21.Size = new Size(338, 25);
-            textBox21.TabIndex = 37;
+            txtUbiSeccion.Location = new Point(12, 145);
+            txtUbiSeccion.Name = "txtUbiSeccion";
+            txtUbiSeccion.Size = new Size(338, 25);
+            txtUbiSeccion.TabIndex = 37;
             // 
             // label18
             // 
@@ -320,12 +347,12 @@
             label18.TabIndex = 36;
             label18.Text = "Área";
             // 
-            // textBox20
+            // txtUbiArea
             // 
-            textBox20.Location = new Point(12, 107);
-            textBox20.Name = "textBox20";
-            textBox20.Size = new Size(338, 25);
-            textBox20.TabIndex = 35;
+            txtUbiArea.Location = new Point(12, 107);
+            txtUbiArea.Name = "txtUbiArea";
+            txtUbiArea.Size = new Size(338, 25);
+            txtUbiArea.TabIndex = 35;
             // 
             // label17
             // 
@@ -337,12 +364,12 @@
             label17.TabIndex = 34;
             label17.Text = "Unidad";
             // 
-            // textBox19
+            // txtUbiUnidad
             // 
-            textBox19.Location = new Point(12, 67);
-            textBox19.Name = "textBox19";
-            textBox19.Size = new Size(338, 25);
-            textBox19.TabIndex = 33;
+            txtUbiUnidad.Location = new Point(12, 67);
+            txtUbiUnidad.Name = "txtUbiUnidad";
+            txtUbiUnidad.Size = new Size(338, 25);
+            txtUbiUnidad.TabIndex = 33;
             // 
             // label16
             // 
@@ -363,12 +390,12 @@
             label15.TabIndex = 32;
             label15.Text = "Ubicación";
             // 
-            // textBox18
+            // txtUbiCodigo
             // 
-            textBox18.Location = new Point(12, 27);
-            textBox18.Name = "textBox18";
-            textBox18.Size = new Size(307, 25);
-            textBox18.TabIndex = 31;
+            txtUbiCodigo.Location = new Point(12, 27);
+            txtUbiCodigo.Name = "txtUbiCodigo";
+            txtUbiCodigo.Size = new Size(307, 25);
+            txtUbiCodigo.TabIndex = 31;
             // 
             // panel10
             // 
@@ -376,9 +403,9 @@
             panel10.Controls.Add(label6);
             panel10.Controls.Add(comboBox7);
             panel10.Controls.Add(label9);
-            panel10.Controls.Add(dateTimePicker2);
+            panel10.Controls.Add(dateFecPtaServ);
             panel10.Controls.Add(label10);
-            panel10.Controls.Add(dateTimePicker1);
+            panel10.Controls.Add(dateFecFab);
             panel10.Controls.Add(comboBox6);
             panel10.Controls.Add(comboBox5);
             panel10.Controls.Add(label13);
@@ -393,17 +420,17 @@
             panel10.Controls.Add(textBox15);
             panel10.Controls.Add(textBox12);
             panel10.Controls.Add(label7);
-            panel10.Controls.Add(textBox7);
+            panel10.Controls.Add(txtNroSerie);
             panel10.Controls.Add(label8);
-            panel10.Controls.Add(textBox8);
+            panel10.Controls.Add(txtModelo);
             panel10.Controls.Add(label4);
-            panel10.Controls.Add(textBox4);
+            panel10.Controls.Add(txtCodLocal);
             panel10.Controls.Add(label3);
-            panel10.Controls.Add(textBox3);
+            panel10.Controls.Add(txtCodigo);
             panel10.Controls.Add(label2);
-            panel10.Controls.Add(textBox2);
+            panel10.Controls.Add(txtDescription);
             panel10.Controls.Add(label1);
-            panel10.Controls.Add(textBox1);
+            panel10.Controls.Add(txtCodGrupo);
             panel10.Location = new Point(3, 9);
             panel10.Name = "panel10";
             panel10.Size = new Size(362, 428);
@@ -447,13 +474,13 @@
             label9.TabIndex = 44;
             label9.Text = "Fec. Pta. Serv.";
             // 
-            // dateTimePicker2
+            // dateFecPtaServ
             // 
-            dateTimePicker2.Format = DateTimePickerFormat.Short;
-            dateTimePicker2.Location = new Point(196, 265);
-            dateTimePicker2.Name = "dateTimePicker2";
-            dateTimePicker2.Size = new Size(154, 25);
-            dateTimePicker2.TabIndex = 43;
+            dateFecPtaServ.Format = DateTimePickerFormat.Short;
+            dateFecPtaServ.Location = new Point(196, 265);
+            dateFecPtaServ.Name = "dateFecPtaServ";
+            dateFecPtaServ.Size = new Size(154, 25);
+            dateFecPtaServ.TabIndex = 43;
             // 
             // label10
             // 
@@ -465,13 +492,13 @@
             label10.TabIndex = 42;
             label10.Text = "Fec. Fab.";
             // 
-            // dateTimePicker1
+            // dateFecFab
             // 
-            dateTimePicker1.Format = DateTimePickerFormat.Short;
-            dateTimePicker1.Location = new Point(12, 265);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(178, 25);
-            dateTimePicker1.TabIndex = 41;
+            dateFecFab.Format = DateTimePickerFormat.Short;
+            dateFecFab.Location = new Point(12, 265);
+            dateFecFab.Name = "dateFecFab";
+            dateFecFab.Size = new Size(178, 25);
+            dateFecFab.TabIndex = 41;
             // 
             // comboBox6
             // 
@@ -594,12 +621,12 @@
             label7.TabIndex = 15;
             label7.Text = "Nro Serie";
             // 
-            // textBox7
+            // txtNroSerie
             // 
-            textBox7.Location = new Point(196, 226);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(154, 25);
-            textBox7.TabIndex = 14;
+            txtNroSerie.Location = new Point(196, 226);
+            txtNroSerie.Name = "txtNroSerie";
+            txtNroSerie.Size = new Size(154, 25);
+            txtNroSerie.TabIndex = 14;
             // 
             // label8
             // 
@@ -611,12 +638,12 @@
             label8.TabIndex = 13;
             label8.Text = "Modelo";
             // 
-            // textBox8
+            // txtModelo
             // 
-            textBox8.Location = new Point(12, 226);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(178, 25);
-            textBox8.TabIndex = 12;
+            txtModelo.Location = new Point(12, 226);
+            txtModelo.Name = "txtModelo";
+            txtModelo.Size = new Size(178, 25);
+            txtModelo.TabIndex = 12;
             // 
             // label4
             // 
@@ -628,12 +655,12 @@
             label4.TabIndex = 7;
             label4.Text = "Cod. Local";
             // 
-            // textBox4
+            // txtCodLocal
             // 
-            textBox4.Location = new Point(196, 106);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(154, 25);
-            textBox4.TabIndex = 6;
+            txtCodLocal.Location = new Point(196, 106);
+            txtCodLocal.Name = "txtCodLocal";
+            txtCodLocal.Size = new Size(154, 25);
+            txtCodLocal.TabIndex = 6;
             // 
             // label3
             // 
@@ -645,12 +672,12 @@
             label3.TabIndex = 5;
             label3.Text = "Código";
             // 
-            // textBox3
+            // txtCodigo
             // 
-            textBox3.Location = new Point(12, 106);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(178, 25);
-            textBox3.TabIndex = 4;
+            txtCodigo.Location = new Point(12, 106);
+            txtCodigo.Name = "txtCodigo";
+            txtCodigo.Size = new Size(178, 25);
+            txtCodigo.TabIndex = 4;
             // 
             // label2
             // 
@@ -662,12 +689,12 @@
             label2.TabIndex = 3;
             label2.Text = "Descripción";
             // 
-            // textBox2
+            // txtDescription
             // 
-            textBox2.Location = new Point(12, 66);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(338, 25);
-            textBox2.TabIndex = 2;
+            txtDescription.Location = new Point(12, 66);
+            txtDescription.Name = "txtDescription";
+            txtDescription.Size = new Size(338, 25);
+            txtDescription.TabIndex = 2;
             // 
             // label1
             // 
@@ -680,12 +707,12 @@
             label1.TabIndex = 1;
             label1.Text = "Cod. Grupo";
             // 
-            // textBox1
+            // txtCodGrupo
             // 
-            textBox1.Location = new Point(12, 24);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(307, 25);
-            textBox1.TabIndex = 0;
+            txtCodGrupo.Location = new Point(12, 24);
+            txtCodGrupo.Name = "txtCodGrupo";
+            txtCodGrupo.Size = new Size(307, 25);
+            txtCodGrupo.TabIndex = 0;
             // 
             // panel9
             // 
@@ -700,11 +727,11 @@
             // panel4
             // 
             panel4.Controls.Add(label25);
-            panel4.Controls.Add(dateTimePicker3);
+            panel4.Controls.Add(dateFecBaja);
             panel4.Controls.Add(label27);
-            panel4.Controls.Add(textBox27);
+            panel4.Controls.Add(txtPrioridad);
             panel4.Controls.Add(label29);
-            panel4.Controls.Add(textBox29);
+            panel4.Controls.Add(txtNOverhaul);
             panel4.Location = new Point(3, 9);
             panel4.Name = "panel4";
             panel4.Size = new Size(348, 97);
@@ -721,13 +748,13 @@
             label25.TabIndex = 54;
             label25.Text = "Fecha de Baja";
             // 
-            // dateTimePicker3
+            // dateFecBaja
             // 
-            dateTimePicker3.Format = DateTimePickerFormat.Short;
-            dateTimePicker3.Location = new Point(179, 24);
-            dateTimePicker3.Name = "dateTimePicker3";
-            dateTimePicker3.Size = new Size(158, 25);
-            dateTimePicker3.TabIndex = 53;
+            dateFecBaja.Format = DateTimePickerFormat.Short;
+            dateFecBaja.Location = new Point(179, 24);
+            dateFecBaja.Name = "dateFecBaja";
+            dateFecBaja.Size = new Size(158, 25);
+            dateFecBaja.TabIndex = 53;
             // 
             // label27
             // 
@@ -740,12 +767,12 @@
             label27.TabIndex = 52;
             label27.Text = "Prioridad";
             // 
-            // textBox27
+            // txtPrioridad
             // 
-            textBox27.Location = new Point(12, 66);
-            textBox27.Name = "textBox27";
-            textBox27.Size = new Size(325, 25);
-            textBox27.TabIndex = 51;
+            txtPrioridad.Location = new Point(12, 66);
+            txtPrioridad.Name = "txtPrioridad";
+            txtPrioridad.Size = new Size(325, 25);
+            txtPrioridad.TabIndex = 51;
             // 
             // label29
             // 
@@ -758,12 +785,12 @@
             label29.TabIndex = 50;
             label29.Text = "N° Overhaul";
             // 
-            // textBox29
+            // txtNOverhaul
             // 
-            textBox29.Location = new Point(13, 24);
-            textBox29.Name = "textBox29";
-            textBox29.Size = new Size(160, 25);
-            textBox29.TabIndex = 49;
+            txtNOverhaul.Location = new Point(13, 24);
+            txtNOverhaul.Name = "txtNOverhaul";
+            txtNOverhaul.Size = new Size(160, 25);
+            txtNOverhaul.TabIndex = 49;
             // 
             // panel3
             // 
@@ -772,13 +799,13 @@
             panel3.Controls.Add(panel5);
             panel3.Controls.Add(label24);
             panel3.Controls.Add(label22);
-            panel3.Controls.Add(textBox24);
+            panel3.Controls.Add(txtCostoTotal);
             panel3.Controls.Add(label23);
-            panel3.Controls.Add(textBox25);
+            panel3.Controls.Add(txtTerceros);
             panel3.Controls.Add(label21);
-            panel3.Controls.Add(textBox23);
+            panel3.Controls.Add(txtRepuestos);
             panel3.Controls.Add(label20);
-            panel3.Controls.Add(textBox22);
+            panel3.Controls.Add(txtManoObra);
             panel3.Location = new Point(3, 106);
             panel3.Name = "panel3";
             panel3.Size = new Size(348, 339);
@@ -934,15 +961,15 @@
             label22.TabIndex = 40;
             label22.Text = "Costo Total";
             // 
-            // textBox24
+            // txtCostoTotal
             // 
-            textBox24.Enabled = false;
-            textBox24.Location = new Point(181, 253);
-            textBox24.Name = "textBox24";
-            textBox24.Size = new Size(155, 25);
-            textBox24.TabIndex = 39;
-            textBox24.Text = ".00";
-            textBox24.TextAlign = HorizontalAlignment.Right;
+            txtCostoTotal.Enabled = false;
+            txtCostoTotal.Location = new Point(181, 253);
+            txtCostoTotal.Name = "txtCostoTotal";
+            txtCostoTotal.Size = new Size(155, 25);
+            txtCostoTotal.TabIndex = 39;
+            txtCostoTotal.Text = ".00";
+            txtCostoTotal.TextAlign = HorizontalAlignment.Right;
             // 
             // label23
             // 
@@ -954,15 +981,15 @@
             label23.TabIndex = 38;
             label23.Text = "Terceros";
             // 
-            // textBox25
+            // txtTerceros
             // 
-            textBox25.Enabled = false;
-            textBox25.Location = new Point(12, 253);
-            textBox25.Name = "textBox25";
-            textBox25.Size = new Size(156, 25);
-            textBox25.TabIndex = 37;
-            textBox25.Text = ".00";
-            textBox25.TextAlign = HorizontalAlignment.Right;
+            txtTerceros.Enabled = false;
+            txtTerceros.Location = new Point(12, 253);
+            txtTerceros.Name = "txtTerceros";
+            txtTerceros.Size = new Size(156, 25);
+            txtTerceros.TabIndex = 37;
+            txtTerceros.Text = ".00";
+            txtTerceros.TextAlign = HorizontalAlignment.Right;
             // 
             // label21
             // 
@@ -974,15 +1001,15 @@
             label21.TabIndex = 36;
             label21.Text = "Repuestos";
             // 
-            // textBox23
+            // txtRepuestos
             // 
-            textBox23.Enabled = false;
-            textBox23.Location = new Point(181, 211);
-            textBox23.Name = "textBox23";
-            textBox23.Size = new Size(155, 25);
-            textBox23.TabIndex = 35;
-            textBox23.Text = ".00";
-            textBox23.TextAlign = HorizontalAlignment.Right;
+            txtRepuestos.Enabled = false;
+            txtRepuestos.Location = new Point(181, 211);
+            txtRepuestos.Name = "txtRepuestos";
+            txtRepuestos.Size = new Size(155, 25);
+            txtRepuestos.TabIndex = 35;
+            txtRepuestos.Text = ".00";
+            txtRepuestos.TextAlign = HorizontalAlignment.Right;
             // 
             // label20
             // 
@@ -994,15 +1021,15 @@
             label20.TabIndex = 34;
             label20.Text = "Mano de Obra";
             // 
-            // textBox22
+            // txtManoObra
             // 
-            textBox22.Enabled = false;
-            textBox22.Location = new Point(12, 211);
-            textBox22.Name = "textBox22";
-            textBox22.Size = new Size(156, 25);
-            textBox22.TabIndex = 33;
-            textBox22.Text = ".00";
-            textBox22.TextAlign = HorizontalAlignment.Right;
+            txtManoObra.Enabled = false;
+            txtManoObra.Location = new Point(12, 211);
+            txtManoObra.Name = "txtManoObra";
+            txtManoObra.Size = new Size(156, 25);
+            txtManoObra.TabIndex = 33;
+            txtManoObra.Text = ".00";
+            txtManoObra.TextAlign = HorizontalAlignment.Right;
             // 
             // panelImgFichaTecnica
             // 
@@ -1039,11 +1066,12 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             Controls.Add(tabControl1);
-            Controls.Add(toolStrip1);
+            Controls.Add(fichaTecnicaToolStrip);
             Name = "UcFichaTecnica";
             Size = new Size(1559, 842);
-            toolStrip1.ResumeLayout(false);
-            toolStrip1.PerformLayout();
+            Load += UcFichaTecnica_Load;
+            fichaTecnicaToolStrip.ResumeLayout(false);
+            fichaTecnicaToolStrip.PerformLayout();
             tabControl1.ResumeLayout(false);
             tabDatoEquipo.ResumeLayout(false);
             tabControl2.ResumeLayout(false);
@@ -1072,7 +1100,7 @@
 
         #endregion
 
-        private ToolStrip toolStrip1;
+        private ToolStrip fichaTecnicaToolStrip;
         private TabControl tabControl1;
         private TabPage tabDatoEquipo;
         private TabControl tabControl2;
@@ -1086,22 +1114,22 @@
         private Panel panel2;
         private Button button2;
         private Label label19;
-        private TextBox textBox21;
+        private TextBox txtUbiSeccion;
         private Label label18;
-        private TextBox textBox20;
+        private TextBox txtUbiArea;
         private Label label17;
-        private TextBox textBox19;
+        private TextBox txtUbiUnidad;
         private Label label16;
         private Label label15;
-        private TextBox textBox18;
+        private TextBox txtUbiCodigo;
         private Panel panel10;
         private Button button1;
         private Label label6;
         private ComboBox comboBox7;
         private Label label9;
-        private DateTimePicker dateTimePicker2;
+        private DateTimePicker dateFecPtaServ;
         private Label label10;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker dateFecFab;
         private ComboBox comboBox6;
         private ComboBox comboBox5;
         private Label label13;
@@ -1116,25 +1144,25 @@
         private TextBox textBox15;
         private TextBox textBox12;
         private Label label7;
-        private TextBox textBox7;
+        private TextBox txtNroSerie;
         private Label label8;
-        private TextBox textBox8;
+        private TextBox txtModelo;
         private Label label4;
-        private TextBox textBox4;
+        private TextBox txtCodLocal;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox txtCodigo;
         private Label label2;
-        private TextBox textBox2;
+        private TextBox txtDescription;
         private Label label1;
-        private TextBox textBox1;
+        private TextBox txtCodGrupo;
         private Panel panel9;
         private Panel panel4;
         private Label label25;
-        private DateTimePicker dateTimePicker3;
+        private DateTimePicker dateFecBaja;
         private Label label27;
-        private TextBox textBox27;
+        private TextBox txtPrioridad;
         private Label label29;
-        private TextBox textBox29;
+        private TextBox txtNOverhaul;
         private Panel panel3;
         private Label label26;
         private Panel panel6;
@@ -1149,16 +1177,19 @@
         private RadioButton radioButton1;
         private Label label24;
         private Label label22;
-        private TextBox textBox24;
+        private TextBox txtCostoTotal;
         private Label label23;
-        private TextBox textBox25;
+        private TextBox txtTerceros;
         private Label label21;
-        private TextBox textBox23;
+        private TextBox txtRepuestos;
         private Label label20;
-        private TextBox textBox22;
-        private ToolStripButton toolStripButton1;
-        private ToolStripButton toolStripButton2;
-        private ToolStripButton toolStripButton3;
-        private ToolStripButton toolStripButton4;
+        private TextBox txtManoObra;
+        private ToolStripButton fichaTecnicaToolStripBtnAllPrevius;
+        private ToolStripButton fichaTecnicaToolStripBtnPrevius;
+        private ToolStripButton fichaTecnicaToolStripBtnNext;
+        private ToolStripButton fichaTecnicaToolStripBtnAllNext;
+        private ToolStripSeparator toolStripSeparator1;
+        private ToolStripLabel fichaTecnicaToolStripImgItem;
+        private ToolStripLabel fichaTecnicaToolStripDesItem;
     }
 }

@@ -1,0 +1,113 @@
+[
+	{
+		"Id": 1,
+		"Name": "Name Test 1",
+		"CodGrupo": "CodGrupo Test 1",
+		"Description": "Description Test 1",
+		"Codigo": "Codigo Test 1",
+		"CodLocal": "CodLocal Test 1",
+		"Supervisor": "Supervisor Test 1",
+		"Marca": "Marca Test 1",
+		"Modelo": "Modelo Test 1",
+		"NroSerie": "NroSerie Test 1",
+		"FecFab": "21-03-2023",
+		"FecPtaServ": "21-03-2023",
+		"Parametro1": "Parametro1 Test 1",
+		"Parametro2": "Parametro2 Test 1",
+		"Esquema": "Esquema Test 1",
+		"NOverhaul": "NOverhaul Test 1",
+		"FecBaja": "21-03-2023",
+		"Prioridad": "Prioridad Test 1",
+		"Status1": "Status1 Test 1",
+		"Status2": "Status2 Test 1",
+		
+		"ManoObra": 1,
+		"Repuestos": 2,
+		"Terceros": 3,
+		"CostoTotal": 4,
+		
+		"ImgItem": "https://images.squarespace-cdn.com/content/v1/55b6a6dce4b089e11621d3ed/1585087896250-R3GZ6OFWYQRZUJRCJU3D/produce_monthly.png",
+		
+		"Ubicacion":{
+			"Id": 1,
+			"Codigo": "Codigo 1",
+			"Unidad": "Unidad 1",
+			"Area": "Area 1",
+			"Seccion": "Seccion 1"
+		}
+	},
+	{
+		"Id": 2,
+		"Name": "Name Test 2",
+		"CodGrupo": "CodGrupo Test 2",
+		"Description": "Description Test 2",
+		"Codigo": "Codigo Test 2",
+		"CodLocal": "CodLocal Test 2",
+		"Supervisor": "Supervisor Test 2",
+		"Marca": "Marca Test 2",
+		"Modelo": "Modelo Test 2",
+		"NroSerie": "NroSerie Test 2",
+		"FecFab": "22-03-2023",
+		"FecPtaServ": "22-03-2023",
+		"Parametro2": "Parametro2 Test 2",
+		"Parametro2": "Parametro2 Test 2",
+		"Esquema": "Esquema Test 2",
+		"NOverhaul": "NOverhaul Test 2",
+		"FecBaja": "22-03-2023",
+		"Prioridad": "Prioridad Test 2",
+		"Status2": "Status2 Test 2",
+		"Status2": "Status2 Test 2",
+		
+		"ManoObra": 2,
+		"Repuestos": 2,
+		"Terceros": 3,
+		"CostoTotal": 4,
+		
+		"ImgItem": "https://www150.statcan.gc.ca/n1/edu/power-pouvoir/c-g/c-g05-2-1-eng.png",
+		
+		"Ubicacion":{
+			"Id": 2,
+			"Codigo": "Codigo 2",
+			"Unidad": "Unidad 2",
+			"Area": "Area 2",
+			"Seccion": "Seccion 2"
+		}
+	},
+	{
+		"Id": 3,
+		"Name": "Name Test 3",
+		"CodGrupo": "CodGrupo Test 3",
+		"Description": "Description Test 3",
+		"Codigo": "Codigo Test 3",
+		"CodLocal": "CodLocal Test 3",
+		"Supervisor": "Supervisor Test 3",
+		"Marca": "Marca Test 3",
+		"Modelo": "Modelo Test 3",
+		"NroSerie": "NroSerie Test 3",
+		"FecFab": "23-03-2023",
+		"FecPtaServ": "23-03-2023",
+		"Parametro3": "Parametro3 Test 3",
+		"Parametro3": "Parametro3 Test 3",
+		"Esquema": "Esquema Test 3",
+		"NOverhaul": "NOverhaul Test 3",
+		"FecBaja": "23-03-2023",
+		"Prioridad": "Prioridad Test 3",
+		"Status3": "Status3 Test 3",
+		"Status3": "Status3 Test 3",
+		
+		"ManoObra": 3,
+		"Repuestos": 3,
+		"Terceros": 3,
+		"CostoTotal": 4,
+		
+		"ImgItem": "https://prolaborate.sparxsystems.com/img/PortalPage/Charts/bubble-chart-item.png",
+		
+		"Ubicacion":{
+			"Id": 3,
+			"Codigo": "Codigo 3",
+			"Unidad": "Unidad 3",
+			"Area": "Area 3",
+			"Seccion": "Seccion 3"
+		}
+	}
+]
