@@ -99,15 +99,15 @@
             panel3 = new Panel();
             label26 = new Label();
             panel6 = new Panel();
-            radioButton5 = new RadioButton();
-            radioButton6 = new RadioButton();
-            radioButton8 = new RadioButton();
-            radioButton7 = new RadioButton();
+            rdDesmovilizado = new RadioButton();
+            rdMalo = new RadioButton();
+            rdBueno = new RadioButton();
+            rdRegular = new RadioButton();
             panel5 = new Panel();
-            radioButton3 = new RadioButton();
-            radioButton4 = new RadioButton();
-            radioButton2 = new RadioButton();
-            radioButton1 = new RadioButton();
+            rdBaja = new RadioButton();
+            rdReparacion = new RadioButton();
+            rdStandBy = new RadioButton();
+            rdOperativo = new RadioButton();
             label24 = new Label();
             label22 = new Label();
             txtCostoTotal = new TextBox();
@@ -823,123 +823,123 @@
             // 
             // panel6
             // 
-            panel6.Controls.Add(radioButton5);
-            panel6.Controls.Add(radioButton6);
-            panel6.Controls.Add(radioButton8);
-            panel6.Controls.Add(radioButton7);
+            panel6.Controls.Add(rdDesmovilizado);
+            panel6.Controls.Add(rdMalo);
+            panel6.Controls.Add(rdBueno);
+            panel6.Controls.Add(rdRegular);
             panel6.Location = new Point(182, 7);
             panel6.Name = "panel6";
             panel6.Size = new Size(156, 161);
             panel6.TabIndex = 43;
             // 
-            // radioButton5
+            // rdDesmovilizado
             // 
-            radioButton5.AutoSize = true;
-            radioButton5.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton5.Location = new Point(7, 121);
-            radioButton5.Name = "radioButton5";
-            radioButton5.Size = new Size(115, 23);
-            radioButton5.TabIndex = 51;
-            radioButton5.TabStop = true;
-            radioButton5.Text = "Desmovilizado";
-            radioButton5.UseVisualStyleBackColor = true;
+            rdDesmovilizado.AutoSize = true;
+            rdDesmovilizado.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            rdDesmovilizado.Location = new Point(7, 121);
+            rdDesmovilizado.Name = "rdDesmovilizado";
+            rdDesmovilizado.Size = new Size(115, 23);
+            rdDesmovilizado.TabIndex = 51;
+            rdDesmovilizado.TabStop = true;
+            rdDesmovilizado.Text = "Desmovilizado";
+            rdDesmovilizado.UseVisualStyleBackColor = true;
             // 
-            // radioButton6
+            // rdMalo
             // 
-            radioButton6.AutoSize = true;
-            radioButton6.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton6.Location = new Point(7, 85);
-            radioButton6.Margin = new Padding(0, 3, 0, 3);
-            radioButton6.Name = "radioButton6";
-            radioButton6.Size = new Size(58, 23);
-            radioButton6.TabIndex = 50;
-            radioButton6.TabStop = true;
-            radioButton6.Text = "Malo";
-            radioButton6.UseVisualStyleBackColor = true;
+            rdMalo.AutoSize = true;
+            rdMalo.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            rdMalo.Location = new Point(7, 85);
+            rdMalo.Margin = new Padding(0, 3, 0, 3);
+            rdMalo.Name = "rdMalo";
+            rdMalo.Size = new Size(58, 23);
+            rdMalo.TabIndex = 50;
+            rdMalo.TabStop = true;
+            rdMalo.Text = "Malo";
+            rdMalo.UseVisualStyleBackColor = true;
             // 
-            // radioButton8
+            // rdBueno
             // 
-            radioButton8.AutoSize = true;
-            radioButton8.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton8.Location = new Point(7, 11);
-            radioButton8.Name = "radioButton8";
-            radioButton8.Size = new Size(66, 23);
-            radioButton8.TabIndex = 48;
-            radioButton8.TabStop = true;
-            radioButton8.Text = "Bueno";
-            radioButton8.UseVisualStyleBackColor = true;
+            rdBueno.AutoSize = true;
+            rdBueno.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            rdBueno.Location = new Point(7, 10);
+            rdBueno.Name = "rdBueno";
+            rdBueno.Size = new Size(66, 23);
+            rdBueno.TabIndex = 48;
+            rdBueno.TabStop = true;
+            rdBueno.Text = "Bueno";
+            rdBueno.UseVisualStyleBackColor = true;
             // 
-            // radioButton7
+            // rdRegular
             // 
-            radioButton7.AutoSize = true;
-            radioButton7.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton7.Location = new Point(7, 47);
-            radioButton7.Name = "radioButton7";
-            radioButton7.Size = new Size(73, 23);
-            radioButton7.TabIndex = 49;
-            radioButton7.TabStop = true;
-            radioButton7.Text = "Regular";
-            radioButton7.UseVisualStyleBackColor = true;
+            rdRegular.AutoSize = true;
+            rdRegular.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            rdRegular.Location = new Point(7, 45);
+            rdRegular.Name = "rdRegular";
+            rdRegular.Size = new Size(73, 23);
+            rdRegular.TabIndex = 49;
+            rdRegular.TabStop = true;
+            rdRegular.Text = "Regular";
+            rdRegular.UseVisualStyleBackColor = true;
             // 
             // panel5
             // 
-            panel5.Controls.Add(radioButton3);
-            panel5.Controls.Add(radioButton4);
-            panel5.Controls.Add(radioButton2);
-            panel5.Controls.Add(radioButton1);
+            panel5.Controls.Add(rdBaja);
+            panel5.Controls.Add(rdReparacion);
+            panel5.Controls.Add(rdStandBy);
+            panel5.Controls.Add(rdOperativo);
             panel5.Location = new Point(13, 7);
             panel5.Name = "panel5";
             panel5.Size = new Size(156, 161);
             panel5.TabIndex = 42;
             // 
-            // radioButton3
+            // rdBaja
             // 
-            radioButton3.AutoSize = true;
-            radioButton3.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton3.Location = new Point(6, 121);
-            radioButton3.Name = "radioButton3";
-            radioButton3.Size = new Size(73, 23);
-            radioButton3.TabIndex = 47;
-            radioButton3.TabStop = true;
-            radioButton3.Text = "De Baja";
-            radioButton3.UseVisualStyleBackColor = true;
+            rdBaja.AutoSize = true;
+            rdBaja.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            rdBaja.Location = new Point(6, 121);
+            rdBaja.Name = "rdBaja";
+            rdBaja.Size = new Size(73, 23);
+            rdBaja.TabIndex = 47;
+            rdBaja.TabStop = true;
+            rdBaja.Text = "De Baja";
+            rdBaja.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // rdReparacion
             // 
-            radioButton4.AutoSize = true;
-            radioButton4.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton4.Location = new Point(6, 85);
-            radioButton4.Margin = new Padding(0, 3, 0, 3);
-            radioButton4.Name = "radioButton4";
-            radioButton4.Size = new Size(94, 23);
-            radioButton4.TabIndex = 46;
-            radioButton4.TabStop = true;
-            radioButton4.Text = "Reparación";
-            radioButton4.UseVisualStyleBackColor = true;
+            rdReparacion.AutoSize = true;
+            rdReparacion.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            rdReparacion.Location = new Point(6, 85);
+            rdReparacion.Margin = new Padding(0, 3, 0, 3);
+            rdReparacion.Name = "rdReparacion";
+            rdReparacion.Size = new Size(94, 23);
+            rdReparacion.TabIndex = 46;
+            rdReparacion.TabStop = true;
+            rdReparacion.Text = "Reparación";
+            rdReparacion.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // rdStandBy
             // 
-            radioButton2.AutoSize = true;
-            radioButton2.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton2.Location = new Point(7, 45);
-            radioButton2.Name = "radioButton2";
-            radioButton2.Size = new Size(81, 23);
-            radioButton2.TabIndex = 45;
-            radioButton2.TabStop = true;
-            radioButton2.Text = "Stand By";
-            radioButton2.UseVisualStyleBackColor = true;
+            rdStandBy.AutoSize = true;
+            rdStandBy.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            rdStandBy.Location = new Point(7, 45);
+            rdStandBy.Name = "rdStandBy";
+            rdStandBy.Size = new Size(81, 23);
+            rdStandBy.TabIndex = 45;
+            rdStandBy.TabStop = true;
+            rdStandBy.Text = "Stand By";
+            rdStandBy.UseVisualStyleBackColor = true;
             // 
-            // radioButton1
+            // rdOperativo
             // 
-            radioButton1.AutoSize = true;
-            radioButton1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
-            radioButton1.Location = new Point(6, 10);
-            radioButton1.Name = "radioButton1";
-            radioButton1.Size = new Size(88, 23);
-            radioButton1.TabIndex = 44;
-            radioButton1.TabStop = true;
-            radioButton1.Text = "Operativo";
-            radioButton1.UseVisualStyleBackColor = true;
+            rdOperativo.AutoSize = true;
+            rdOperativo.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            rdOperativo.Location = new Point(6, 10);
+            rdOperativo.Name = "rdOperativo";
+            rdOperativo.Size = new Size(88, 23);
+            rdOperativo.TabIndex = 44;
+            rdOperativo.TabStop = true;
+            rdOperativo.Text = "Operativo";
+            rdOperativo.UseVisualStyleBackColor = true;
             // 
             // label24
             // 
@@ -1166,15 +1166,15 @@
         private Panel panel3;
         private Label label26;
         private Panel panel6;
-        private RadioButton radioButton5;
-        private RadioButton radioButton6;
-        private RadioButton radioButton8;
-        private RadioButton radioButton7;
+        private RadioButton rdDesmovilizado;
+        private RadioButton rdMalo;
+        private RadioButton rdBueno;
+        private RadioButton rdRegular;
         private Panel panel5;
-        private RadioButton radioButton3;
-        private RadioButton radioButton4;
-        private RadioButton radioButton2;
-        private RadioButton radioButton1;
+        private RadioButton rdBaja;
+        private RadioButton rdReparacion;
+        private RadioButton rdStandBy;
+        private RadioButton rdOperativo;
         private Label label24;
         private Label label22;
         private TextBox txtCostoTotal;

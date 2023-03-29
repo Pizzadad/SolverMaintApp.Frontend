@@ -94,12 +94,105 @@ namespace SolverMaintApp.Frontend.UserControls
             txtPrioridad.Text = fichaTecnicaModel.Prioridad;
             dateFecBaja.Value = fichaTecnicaModel.FecBaja;
 
+            txtManoObra.Text = fichaTecnicaModel.ManoObra.ToString();
+            txtRepuestos.Text = fichaTecnicaModel.Repuestos.ToString();
+            txtTerceros.Text = fichaTecnicaModel.Terceros.ToString();
+            txtCostoTotal.Text = fichaTecnicaModel.CostoTotal.ToString();
+
             pcbFichaTecnica.LoadAsync($@"{fichaTecnicaModel.ImgItem}");
 
             txtUbiCodigo.Text = fichaTecnicaModel.Ubicacion?.Codigo;
             txtUbiUnidad.Text = fichaTecnicaModel.Ubicacion?.Unidad;
             txtUbiArea.Text = fichaTecnicaModel.Ubicacion?.Area;
             txtUbiSeccion.Text = fichaTecnicaModel.Ubicacion?.Seccion;
+
+            switch (fichaTecnicaModel.Status1)
+            {
+                case "O":
+                    rdOperativo.Checked = true;
+                    
+                    rdStandBy.Checked = false;
+                    rdReparacion.Checked = false;
+                    rdBaja.Checked = false;
+
+                    break;
+                case "S":
+                    rdStandBy.Checked = true;
+
+                    rdOperativo.Checked = false;
+                    rdReparacion.Checked = false;
+                    rdBaja.Checked = false;
+
+                    break;
+                case "R":
+                    rdReparacion.Checked = true;
+
+                    rdOperativo.Checked = false;
+                    rdStandBy.Checked = false;
+                    rdBaja.Checked = false;
+
+                    break;
+                case "B":
+                    rdBaja.Checked = true;
+
+                    rdOperativo.Checked = false;
+                    rdStandBy.Checked = false;
+                    rdReparacion.Checked = false;
+
+                    break;
+                default:
+
+                    rdOperativo.Checked = false;
+                    rdStandBy.Checked = false;
+                    rdReparacion.Checked = false;
+                    rdBaja.Checked = false;
+
+                    break;
+            }
+
+            switch (fichaTecnicaModel.Status2)
+            {
+                case "B":
+                    rdBueno.Checked = true;
+
+                    rdRegular.Checked = false;
+                    rdMalo.Checked = false;
+                    rdDesmovilizado.Checked = false;
+
+                    break;
+                case "R":
+                    rdRegular.Checked = true;
+
+                    rdBueno.Checked = false;
+                    rdMalo.Checked = false;
+                    rdDesmovilizado.Checked = false;
+
+                    break;
+                case "M":
+                    rdMalo.Checked = true;
+
+                    rdBueno.Checked = false;
+                    rdRegular.Checked = false;
+                    rdDesmovilizado.Checked = false;
+
+                    break;
+                case "D":
+                    rdDesmovilizado.Checked = true;
+
+                    rdBueno.Checked = false;
+                    rdRegular.Checked = false;
+                    rdMalo.Checked = false;
+
+                    break;
+                default:
+                    
+                    rdBueno.Checked = false;
+                    rdRegular.Checked = false;
+                    rdMalo.Checked = false;
+                    rdDesmovilizado.Checked = false;
+
+                    break;
+            }
 
         }
 

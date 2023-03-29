@@ -1,0 +1,43 @@
+[
+      {
+         "name":"Lima",
+         "description":"Capital",
+         "ProvinciasCerca":[
+            "Lima",
+            "Barranca",
+            "Cajatambo",
+            "Canta",
+            "Cañete"
+         ],
+		 "ProvinciasLejos":[           
+            "Huaral",
+            "Huarochirí",
+            "Huaura",
+            "Oyon ",
+            "Yuayos"
+         ]
+      },
+      {
+         "name":"Piura",
+         "description":"Norte",
+         "Provincias":[
+            "Ayabaca",
+            "Piura",
+            "Huancabamba",
+            "Morropón",
+            "Paita",
+            "Sullana",
+            "Talara",
+            "Sechura"
+         ]
+      },
+      {
+         "name":"Tumbes",
+         "description":"MuyNorte",
+         "Provincias":[
+            "Tumbes",
+            "Contraalmirante Villar",
+            "Zarumilla"
+         ]
+      }
+   ]

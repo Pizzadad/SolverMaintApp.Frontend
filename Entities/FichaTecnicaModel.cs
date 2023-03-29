@@ -31,10 +31,10 @@ namespace SolverMaintApp.Frontend.Entities
         public string? Status1 { get; set; }
         public string? Status2 { get; set; }
 
-        public string? ManoObra { get; set; }
-        public string? Repuestos { get; set; }
-        public string? Terceros { get; set; }
-        public string? CostoTotal { get; set; }
+        public decimal? ManoObra { get; set; }
+        public decimal? Repuestos { get; set; }
+        public decimal? Terceros { get; set; }
+        public decimal? CostoTotal { get; set; }
 
         public string? ImgItem { get; set; }
 

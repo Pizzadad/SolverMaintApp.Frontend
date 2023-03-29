@@ -18,13 +18,13 @@
 		"NOverhaul": "NOverhaul Test 1",
 		"FecBaja": "21-03-2023",
 		"Prioridad": "Prioridad Test 1",
-		"Status1": "Status1 Test 1",
-		"Status2": "Status2 Test 1",
+		"Status1": "B",
+		"Status2": "R",
 		
-		"ManoObra": 1,
-		"Repuestos": 2,
-		"Terceros": 3,
-		"CostoTotal": 4,
+		"ManoObra": 1.00,
+		"Repuestos": 1.00,
+		"Terceros": 1.00,
+		"CostoTotal": 1.00,
 		
 		"ImgItem": "https://images.squarespace-cdn.com/content/v1/55b6a6dce4b089e11621d3ed/1585087896250-R3GZ6OFWYQRZUJRCJU3D/produce_monthly.png",
 		
@@ -55,13 +55,13 @@
 		"NOverhaul": "NOverhaul Test 2",
 		"FecBaja": "22-03-2023",
 		"Prioridad": "Prioridad Test 2",
-		"Status2": "Status2 Test 2",
-		"Status2": "Status2 Test 2",
+		"Status1": "S",
+		"Status2": "B",
 		
-		"ManoObra": 2,
-		"Repuestos": 2,
-		"Terceros": 3,
-		"CostoTotal": 4,
+		"ManoObra": 2.00,
+		"Repuestos": 2.00,
+		"Terceros": 2.00,
+		"CostoTotal": 2.00,
 		
 		"ImgItem": "https://www150.statcan.gc.ca/n1/edu/power-pouvoir/c-g/c-g05-2-1-eng.png",
 		
@@ -92,13 +92,13 @@
 		"NOverhaul": "NOverhaul Test 3",
 		"FecBaja": "23-03-2023",
 		"Prioridad": "Prioridad Test 3",
-		"Status3": "Status3 Test 3",
-		"Status3": "Status3 Test 3",
+		"Status1": "O",
+		"Status2": "D",
 		
-		"ManoObra": 3,
-		"Repuestos": 3,
-		"Terceros": 3,
-		"CostoTotal": 4,
+		"ManoObra": 3.00,
+		"Repuestos": 3.00,
+		"Terceros": 3.00,
+		"CostoTotal": 3.00,
 		
 		"ImgItem": "https://prolaborate.sparxsystems.com/img/PortalPage/Charts/bubble-chart-item.png",
 		
